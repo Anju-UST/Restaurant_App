@@ -1,0 +1,53 @@
+/* Set background color and text color for the navigation bar */
+.navbar {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  /* Style the navigation links */
+  .navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  /* Style the active link */
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* Align the login button to the right */
+  .navbar-nav.ml-auto .nav-link {
+    margin-left: 10px;
+  }
+  
+  /* Add some padding to the navigation links */
+  .navbar-nav li {
+    padding: 0 5px;
+  }
+
+  
+/* Styling for the login button */
+.login-button {
+    background-color: #ff5c39;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #e6472f;
+  }
+
+  .logout-button {
+    background-color: #ff5c39;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #e6472f;
+  }
+  

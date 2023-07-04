@@ -1,0 +1,80 @@
+<app-admin-dashboard></app-admin-dashboard>
+<!-- <div *ngIf="menu && menu.length" class="container">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let menuItem of menu">
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <img src="{{menuItem.mpic}}" alt="image" class="rounded-circle" width="80" height="80">
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-hidden">
+            <b>{{menuItem.mname}}</b>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="overflow-hidden">
+            {{menuItem.mprice}}
+          </div>
+        </div>
+        <div class="col-md-3">
+            <div class="overflow-hidden">
+              {{menuItem.restname}}
+            </div>
+          </div>
+        <!-- <div class="col-md-2 d-flex justify-content-end">
+          <button class="btn btn-secondary btn-sm" (click)="updateMenu(menuItem.mid)">
+            Update
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteMenu(menuItem.mid)">
+            Remove
+          </button>
+        </div> -->
+      <!-- </div>
+    </li>
+  </ul>
+</div> --> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <body>
+    <main class="table">
+      <section class="table__header">
+          <h1>Menu</h1>
+         
+        
+      </section>
+      <section class="table__body" *ngIf="menu && menu.length">
+          <table>
+              <thead>
+                  <tr>
+                      <th> Image  </th>
+                      <th>Name </th>
+                      <th> Price </th>
+                      <th> Resturant Name </th>
+                      <th> Changes </th>
+                     <td></td>
+              
+                    </tr>
+              </thead>
+              <tbody *ngFor="let menuItem of menu">
+                  <tr>
+                     
+                      <td> <img src="{{menuItem.mpic}}" alt=""></td>
+                      <td>{{menuItem.mname}}</td>
+                      <td>
+                        <p>{{menuItem.mprice}}</p></td>
+                      <td> {{menuItem.restname}} </td>
+                      <td colspan="2">
+                        <button class="edit-button" routerLink="/menuupdate" (click) = "updateRest(menuItem.mid)">
+                          <i class="fas fa-pencil-alt"></i> 
+                        </button>
+                        <button class="delete-button" (click) = "deleteRestaurant(menuItem.mid)" routerLink="/delete">
+                          <i class="fas fa-trash"></i> 
+                        </button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+  </main>
+  
+  </body>
+  

@@ -1,0 +1,43 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class="col-md-8 offset-md-3">
+    <form (ngSubmit)="onSubmit()" class="was-validated" >
+        
+        <div class ="form-group">
+            <label for="">Item Name</label>
+            <input type="text" class="form-control" id="name"
+            required pattern="[a-zA-Z]*" 
+            [(ngModel)]="food.mname" name="name">
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback"> Please enter</div>
+        </div>
+        <div class ="form-group">
+            <label for="">Item Price</label>
+            <input type="text" class="form-control" id="address"
+           
+            [(ngModel)]="food.mprice" name="address" required>
+            <div class="valid-feedback">valid</div>
+            <div class="invalid-feedback">Please fill out</div>
+        </div>
+        
+        <div class ="form-group">
+            <label for="">Item Pic(url)</label>
+            <input type="text" class="form-control" id="pic"
+            [(ngModel)]="food.mpic" name="pic">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="restaurant">Restaurant Name</label>
+            <!-- <select id="restaurant" class="form-select" [(ngModel)]="food.restname" formControlName="restaurant">
+              <option *ngFor="let restdet of rest" [value]="restdet.restName">{{restdet.restName}}</option>
+            </select> -->
+
+            <input type="text" class="form-control" id="restname"
+
+            [(ngModel)]="food.restname" name="restname" disabled="disabled">
+
+          </div>
+      <br>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form></div>

@@ -1,0 +1,53 @@
+<app-navbaruser></app-navbaruser>
+<app-banner></app-banner>
+<h1>Available Items</h1>
+<div  class="container">
+  <ul>
+    <li  *ngFor="let menuItem of menu">
+
+      <div>
+        <img src="{{menuItem.mpic}}" alt="" >
+      </div>
+  
+      <div>
+        {{menuItem.mname}}
+      </div>
+  
+      <div>
+        ₹ {{menuItem.mprice}}
+      </div>
+  
+      <div>
+        <button class="btn btn-outline-success" (click)="addtocart(menuItem)">
+       &nbsp;  Add  &nbsp;
+  
+        </button>
+      
+      </div>
+  
+      <div>
+
+        <button class="btn btn-outline-danger">
+          Remove
+        </button>
+  
+      </div>
+  
+    </li>
+  
+  </ul>
+  
+  <div class="checkout">
+  
+      <div class="foods-count" style=" font-size: 1.4rem;
+      font-weight: 700;">Menu</div>
+  
+      <div>
+  
+  
+      </div>
+  
+    <a>Add Cart</a>
+  
+  </div>
+  </div>

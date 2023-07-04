@@ -1,0 +1,46 @@
+<app-admin-dashboard></app-admin-dashboard>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <body>
+    <main class="table">
+      <section class="table__header">
+          <h1>Menu</h1>
+         
+        
+      </section>
+      <section class="table__body" *ngIf="menu && menu.length">
+          <table>
+              <thead>
+                  <tr>
+                      <th> Image  </th>
+                      <th>Name </th>
+                      <th> Price </th>
+                      <th> Resturant Name </th>
+                      <th> Changes </th>
+                     <td></td>
+              
+                    </tr>
+              </thead>
+              <tbody *ngFor="let menuItem of menu">
+                  <tr>
+                     
+                      <td> <img src="{{menuItem.mpic}}" alt=""></td>
+                      <td>{{menuItem.mname}}</td>
+                      <td>
+                        <p>{{menuItem.mprice}}</p></td>
+                      <td> {{menuItem.restname}} </td>
+                      <td colspan="2">
+                        <button class="edit-button" routerLink="/update" (click) = "updateRest(menuItem.mid)">
+                          <i class="fas fa-pencil-alt"></i> 
+                        </button>
+                        <button class="delete-button" (click) = "deleteRestaurant(menuItem.mid)" routerLink="/delete">
+                          <i class="fas fa-trash"></i> 
+                        </button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+  </main>
+  
+  </body>
+  

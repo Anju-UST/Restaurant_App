@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.browser-view{
+    min-height: 100vh; /* Ensure the container takes up the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+.footerr{
+    margin-top:auto;
+}

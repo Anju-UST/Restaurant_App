@@ -1,0 +1,56 @@
+body {
+    background-color: #f8f9fa;
+  }
+
+  .navbar {
+    background-color: #000;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+  }
+
+  .button-container .button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .button-container .button i {
+    margin-right: 5px;
+  }
+
+  .button-container .button:hover {
+    background-color: #222;
+  }
+
+  .kitchen-staff-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .kitchen-staff-container .button {
+    margin-right: 10px;
+  }

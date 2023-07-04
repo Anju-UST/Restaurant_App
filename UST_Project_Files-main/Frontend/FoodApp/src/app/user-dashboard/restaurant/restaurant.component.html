@@ -1,0 +1,26 @@
+<body>
+    <h1 style="font-style: italic; margin-bottom: 30px; text-shadow: 30px;
+text-align: center; text-decoration: underline;">Our Restaurant</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"  *ngFor="let restaurant of rest">
+          <div class="card" (click)="checkLogin(restaurant)">
+            <img src="{{restaurant.restPic}}" class="card-img-top" alt="Image 1">
+            <div class="card-body">
+              <h5 class="card-title"  style="text-align: center;"
+              > &nbsp;
+              {{restaurant.restName}}</h5>
+              <p class="card-text">
+                <i class="fas fa-map-marker-alt icon"></i>{{restaurant.restAddress}}</p>
+              <p class="card-text">
+                <i class="fas fa-phone icon"></i>{{restaurant.restContact}}</p>
+            </div>
+          </div>
+        </div>
+      
+       
+      </div>
+    </div>
+  
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  </body>

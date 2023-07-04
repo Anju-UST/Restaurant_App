@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="kitchenstaff-service" />
+        <module name="UserBookCapstone" />
+        <module name="cart-service" />
+        <module name="authentication-service" />
+        <module name="ServiceRegistery" />
+        <module name="menu-service" />
+        <module name="admin-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ServiceRegistery" options="-parameters" />
+      <module name="UserBookCapstone" options="-parameters" />
+      <module name="admin-service" options="-parameters" />
+      <module name="authentication-service" options="-parameters" />
+      <module name="cart-service" options="-parameters" />
+      <module name="kitchenstaff-service" options="-parameters" />
+      <module name="menu-service" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<app-admin-dashboard></app-admin-dashboard>
+  <body>
+    <main class="table">
+      <section class="table__header">
+          <h1>Restaurant</h1>
+         
+        
+      </section>
+      <section class="table__body" *ngIf="rest && rest.length">
+          <table>
+              <thead>
+                  <tr>
+                      <th>   </th>
+                      <th>Name </th>
+                      <th> Location </th>
+                      <th> Contact </th>
+                      <th> Menu</th>
+                      <th> Changes </th>
+                     <td></td>
+              
+                    </tr>
+              </thead>
+              <tbody *ngFor="let restaurant of rest">
+                  <tr>
+                     
+                      <td> <img src="{{restaurant.restPic}}" alt=""></td>
+                      <td>{{restaurant.restName}}</td>
+                      <td>
+                        <p>{{restaurant.restAddress}}</p></td>
+                      <td> {{restaurant.restContact}} </td>
+                      <td>
+                        <button type="button" class="btn_1" routerLink="/viewmenu" (click)="fetchSpecificRestaurantMenu(restaurant.restName)">Menu</button>
+                      </td>
+                      <td colspan="2">
+                        <button class="edit-button" routerLink="/update" (click) = "updateRest(restaurant.id)">
+                          <i class="fas fa-pencil-alt"></i> 
+                        </button>
+                        <button class="delete-button" (click) = "deleteRestaurant(restaurant.id)" routerLink="/delete">
+                          <i class="fas fa-trash"></i> 
+                        </button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+  </main>
+  
+  </body>
+  

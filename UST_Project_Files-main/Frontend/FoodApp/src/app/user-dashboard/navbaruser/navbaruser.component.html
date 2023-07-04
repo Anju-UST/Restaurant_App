@@ -1,0 +1,30 @@
+<script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
+});
+    </script>
+ <nav>
+  <ul class="menu">
+      <li class="logo"><a href="#" routerLink=''>MealsDrop</a></li>
+      <li class="item"><a href="#" routerLink=''>Home</a></li>
+      <li class="item"><a href="#" routerLink="/about">About</a></li>
+      <li class="item"><a href="#" routerLink="/addtocart" (click)="toggleCart()">Cart</a></li>
+     
+      <li class="item button">
+        <button *ngIf="!isLoggedIn()" class="nav-link btn solid-button" (click)="toggleLogin()">Login</button>
+        <button *ngIf="isLoggedIn()" class="nav-link btn solid-button" (click)="toggleLogin()">Logout</button>
+      </li>
+      <li class="toggle"><span class="bars"></span></li>
+
+  </ul>
+</nav>
